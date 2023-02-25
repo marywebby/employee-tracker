@@ -1,16 +1,28 @@
 -- this is where you have have the data for the tables 
 -- EXAMPLE 
-INSERT INTO favorite_books (book_name, section, in_stock, quantity)
-VALUES ("The Great Gatsby", 1, true, 11),
-       ("Huckleberry Finn", 1, true, 4),
-       ("100 Years of Solitude", 3, false, 0),
-       ("Things Fall Apart", 4 , false, 0 ),
-       ("Crime and Punishment", 1, true, 15),
-       ("Moby Dick", 2, true, 11),
-       ("Decameron", 5, false, 0),
-       ("The Wind and the Willows", 2, true, 11),
-       ("Ulysses", 3, true, 8),
-       ("Madame Bovary", 4 , true, 9 ),
-       ("Catcher in the Rye", 1, true, 23),
-       ("Catch-12", 5, true, 18),
-       ("Hamlet", 5, true, 14);
+INSERT INTO department (name)
+VALUES ("managment");
+
+INSERT INTO department (name)
+VALUES ("customer_service");
+
+INSERT INTO department (name)
+VALUES ("support_staff"); 
+
+INSERT INTO role (title, salary, department_id)
+VALUES ("manager", 100, 1); 
+
+INSERT INTO role (title, salary, department_id)
+VALUES ("barista", 75, 2); 
+
+INSERT INTO role (title, salary, department_id)
+VALUES ("custodian", 65, 3); 
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Cat", "Beam", 1, null); 
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Mary", "Webby", 2, 1);
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Amy", "Larkin", 3, 1); 
