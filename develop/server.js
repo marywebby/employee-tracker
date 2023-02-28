@@ -3,13 +3,14 @@ const inquirer = require('inquirer');
 const mysql = require('mysql2') 
 const cTable = require('console.table');
 const { default: Choices } = require('inquirer/lib/objects/choices');
+require('dotenv').config();
 
 // connection to mysql
 const connection = mysql.createConnection(
     {
     host: '127.0.0.1',
     user: 'root',
-    password: 'Teddyteddy!99',
+    password: process.env.DB_PASSWORD,
     database: 'company_db'
     },
   );
